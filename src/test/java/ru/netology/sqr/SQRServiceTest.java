@@ -6,29 +6,29 @@ import org.junit.jupiter.api.Test;
 public class SQRServiceTest {
 
     @Test
-    public void shouldCalcExact() {
+    public void normalBorder() {
         SQRService service = new SQRService();
 
         int expect = 3;
-        int actual = service.calcSqrt(200, 300);
+        int actual = service.calcSqrtRange(200, 300);
         Assertions.assertEquals(expect, actual);
     }
 
     @Test
-    public void shouldCalcExact2() {
+    public void endBorder() {
         SQRService service = new SQRService();
 
-        int expect = 5;
-        int actual = service.calcSqrt(200, 400);
+        int expect = 1;
+        int actual = service.calcSqrtRange(9800, 9900);
         Assertions.assertEquals(expect, actual);
     }
 
     @Test
-    public void shouldCalcExact3() {
+    public void startBorder() {
         SQRService service = new SQRService();
 
         int expect = 4;
-        int actual = service.calcSqrt(100, 200);
+        int actual = service.calcSqrtRange(100, 200);
         Assertions.assertEquals(expect, actual);
     }
 
